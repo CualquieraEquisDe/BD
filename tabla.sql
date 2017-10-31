@@ -75,15 +75,15 @@ CREATE TABLE Juego_Categoria
 
 CREATE TABLE Jugador
 (
-	id_Jugador integer NOT NULL,
-	gamertag varchar(50) NOT NULL,
-	password varchar(50) NOT NULL,
-	nombre varchar(50) NOT NULL,
-	apellido varchar(50) NOT NULL,
-	email varchar(50) NOT NULL,
-	fecha_nacimiento timestamp without time zone NOT NULL,
-	pais varchar(50) NOT NULL,
-	avatar varchar(50) NOT NULL
+    id_Jugador BIGSERIAL PRIMARY KEY,
+	gamertag varchar(50) ,
+	password varchar(50) ,
+	nombre varchar(50) ,
+	apellido varchar(50) ,
+	email varchar(50) ,
+	fecha_nacimiento timestamp without time zone ,
+	pais varchar(50) ,
+	avatar varchar(50) 
 )
 ;
 
@@ -119,9 +119,6 @@ ALTER TABLE Juego_Categoria ADD CONSTRAINT PK_Juego_Categoria
 	PRIMARY KEY (id)
 ;
 
-ALTER TABLE Jugador ADD CONSTRAINT PK_Jugador
-	PRIMARY KEY (id_Jugador)
-;
 
 /* Create Table Comments, Sequences for Autonumber Columns */
 
